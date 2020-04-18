@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Food Ninja</title>
+  <title>Find My Food</title>
   <!-- materialize icons, css & js -->
   <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,7 +15,7 @@
   <!-- top nav -->
   <nav class="z-depth-0">
     <div class="nav-wrapper container">
-      <a href="/">Food<span>Ninja</span></a>
+      <a href="/">Find<span>My</span>Food<span></span></a>
       <span class="right grey-text text-darken-1">
         <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
       </span>
@@ -24,7 +24,7 @@
 
   <!-- side nav -->
   <ul id="side-menu" class="sidenav side-menu">
-    <li><a class="subheader">FOODNINJA</a></li>
+    <li><a class="subheader">FINDMYFOOD</a></li>
     <li><a href="/" class="waves-effect">Home</a></li>
     <li><a href="/pages/about.html" class="waves-effect">About</a></li>
     <li><div class="divider"></div></li>
@@ -33,9 +33,29 @@
     </li>
   </ul>
 
-  <!-- recipes -->
+  <!-- Food items -->
   <div class="recipes container grey-text text-darken-1">
     <div class="card-panel recipe white row">
+      <img src="/img/pickled_ginger.jpg" alt="pickled ginger">
+      <div class="recipe-details">
+        <div class="recipe-title">Pickled ginger</div>
+        <div class="recipe-ingredients">Found at Netto for 20 Kr.</div>
+      </div>
+      <!-- <div class="recipe-delete">
+        <i class="material-icons">delete_outline</i>
+      </div> -->
+    </div>
+    <div class="card-panel recipe white row">
+      <img src="/img/potato_flour.jpg" alt="potato_flour">
+      <div class="recipe-details">
+        <div class="recipe-title">Potato Flour</div>
+        <div class="recipe-ingredients">Found at Bilka for 35 Kr.</div>
+      </div>
+      <!-- <div class="recipe-delete">
+        <i class="material-icons">delete_outline</i>
+      </div> -->
+    </div>
+    <!-- <div class="card-panel recipe white row">
       <img src="/img/dish.png" alt="recipe thumb">
       <div class="recipe-details">
         <div class="recipe-title">Edame Noodles</div>
@@ -54,27 +74,7 @@
       <div class="recipe-delete">
         <i class="material-icons">delete_outline</i>
       </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="center">
@@ -86,15 +86,19 @@
   <!-- add recipe side nav -->
   <div id="side-form" class="sidenav side-form">
     <form class="add-recipe container section">
-      <h6 >New Recipe</h6>
+      <h6 >New Food Item</h6>
       <div class="divider"></div>
       <div class="input-field">
-        <input placeholder="e.g. Ninja soup" id="title" type="text" class="validate">
-        <label for="title">Recipe Title</label>
+        <input placeholder="e.g. Edamame" id="title" type="text" class="validate">
+        <label for="title">Food item</label>
       </div>
       <div class="input-field">
-        <input placeholder="e.g. Tofu, mushroom, garlic" id="ingredients" type="text" class="validate">
-        <label for="ingredients">Ingredients</label>
+        <input placeholder="e.g. Netto" id="ingredients" type="text" class="validate">
+        <label for="ingredients">Found at </label>
+      </div>
+      <div class="input-field">
+        <input placeholder="e.g. 78" id="price" type="text" class="validate">
+        <label for="title">Price [DKK]</label>
       </div>
       <div class="input-field center">
         <button class="btn-small">Add</button>
